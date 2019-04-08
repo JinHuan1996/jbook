@@ -15,9 +15,13 @@ server:
     max-threads: 300
     accept-count: 200
   port: 8080
+
 mybatis:
   type-aliases-package: com.zb.mapper
   mapper-locations: classpath:mapping/*.xml
+  configuration:
+    cache-enabled: true
+    mapUnderscoreToCamelCase: true
 
 pagehelper:
   helper-dialect: mysql
